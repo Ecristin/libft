@@ -10,4 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
+int main()
+{
+		int resultado;
+
+	resultado = ft_memcmp("t\200", "t\0", 2);
+
+	printf("%d\n", resultado);
+		return(0);
+}

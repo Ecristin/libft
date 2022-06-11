@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 //A função copia o valor da sting SRC(origem) e cola na des(destino) e o retorno precisa ser o tamanho de src(origem)
-# incluide  " libft.h "
+#include "libft.h"
 
 size_t 	ft_strlcpy ( char *dst, const  char *src, size_t dstsize)
 {

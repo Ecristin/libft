@@ -42,7 +42,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 //	return (dstsize + src_len);
 //}
-
+/*
 #include <string.h>
  
  int main ()
@@ -57,3 +57,4 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
     printf("%d\n", resultado);
 	printf("original: %d\n", original);
  }
+*/

@@ -12,8 +12,8 @@
 
 //A função strrchr () retorna um ponteiro para a última ocorrência do caractere c na string s retorna a primeira ocorrência
 
+#include "libft.h"
 #include <string.h>
-int ft_strlen(const char *s)
 
 char *ft_strrchr(const char *str, int c)
 {

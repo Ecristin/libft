@@ -3,19 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ecristin <ecristin@student.42.rio>         +#+  +:+       +#+        */
+/*   By: luciano <luciano@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/04 12:04:28 by ecristin          #+#    #+#             */
-/*   Updated: 2022/06/11 13:44:32 by ecristin         ###   ########.fr       */
+/*   Created: 2021/12/13 15:03:26 by llima-da          #+#    #+#             */
+/*   Updated: 2022/05/19 01:42:58 by luciano          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <stdlib.h>
 
-#include <stdlib.h>
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
- int ft_isalpha(int c);
+int	ft_atoi(const char *str);
+void ft_bzero(void *s, size_t n);
+int ft_isalpha(int c);
  int ft_isdigit(int c);
  int ft_isprint(int c);
  int ft_isalnum(int c);
@@ -33,7 +40,7 @@
  char *ft_strrchr(const char *str, int c);
  int ft_tolower(int c);
  int ft_toupper(int c);
- char    *ft_strnstr(const char *primeira, const char *segunda, size_t len)
- void    *ft_calloc(size_t memo, size_t size)
+ char    *ft_strnstr(const char *primeira, const char *segunda, size_t len);
+ void    *ft_calloc(size_t memo, size_t size);
 
-#endif 
+#endif

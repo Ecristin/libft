@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
+
 {
 	if (c >= 'a' && c<= 'z')
 // se c estiver entre a e z e for minusculo deverá retornar c maiúsculo
