@@ -3,22 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciano <luciano@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ecristin <ecristin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 15:03:26 by llima-da          #+#    #+#             */
-/*   Updated: 2022/05/19 01:42:58 by luciano          ###   ########.fr       */
+/*   Created: 2022/06/13 19:36:22 by ecristin          #+#    #+#             */
+/*   Updated: 2022/06/13 21:32:53 by ecristin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+# include <unistd.h>
 
 int	ft_atoi(const char *str);
 void ft_bzero(void *s, size_t n);
@@ -42,5 +37,17 @@ int ft_isalpha(int c);
  int ft_toupper(int c);
  char    *ft_strnstr(const char *primeira, const char *segunda, size_t len);
  void    *ft_calloc(size_t memo, size_t size);
+ char    *ft_strdup(const char *s);
+ char    *ft_substr(char const *s, unsigned int start, size_t len);
+ char    *ft_strjoin(char const *s1, char const *s2);
+ char    *ft_strtrim(char const *s1, char const *set); 
+ char    **ft_split(char const *s, char c);
+ char    *ft_itoa(int n);
+ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+ void    ft_striteri(char *s, void (*f)(unsigned int, char*));
+ void    ft_putchar_fd(char s, int fd);
+ void    ft_putstr_fd(char *s, int fd);
+ void    ft_putendl_fd(char *s, int fd);
+ void    ft_putnbr_fd(int n, int fd);
 
 #endif

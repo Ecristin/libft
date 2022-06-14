@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecristin <ecristin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/02 21:17:31 by ecristin          #+#    #+#             */
-/*   Updated: 2022/06/11 11:54:58 by ecristin         ###   ########.fr       */
+/*   Created: 2022/06/13 19:13:45 by ecristin          #+#    #+#             */
+/*   Updated: 2022/06/13 19:17:41 by ecristin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <string.h>
+#include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t i;
+	char	*dup;
+	size_t	size;
 
-	i = 0;
-
-	while ( i < n)
-	{
-		if (((unsigned char *)s)[i] == c)
-			return((unsigned char *)s + i);
-		i++;
-	}
-	return(0);
+	size = ft_strlen(s) + 1;
+	dup = (char *) malloc(size);
+	if (!dup)
+		return (NULL);
+	ft_strlcpy(dup, s, size);
+	return (dup);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char str[] = "cristine";
-	//char encontre = "t";
-	char *resultado;
-	resultado = ft_memchr(str, 't', 3);
 
-	printf("%s\n", resultado);
-
-	return(0);
-}
-*/

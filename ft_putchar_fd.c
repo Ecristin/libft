@@ -1,42 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecristin <ecristin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/02 21:17:31 by ecristin          #+#    #+#             */
-/*   Updated: 2022/06/11 11:54:58 by ecristin         ###   ########.fr       */
+/*   Created: 2022/06/13 20:58:57 by ecristin          #+#    #+#             */
+/*   Updated: 2022/06/13 20:59:30 by ecristin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <string.h>
+#include <unistd.h>
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	ft_putchar_fd(char s, int fd)
 {
-	size_t i;
-
-	i = 0;
-
-	while ( i < n)
-	{
-		if (((unsigned char *)s)[i] == c)
-			return((unsigned char *)s + i);
-		i++;
-	}
-	return(0);
+	write(fd, &s, 1);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char str[] = "cristine";
-	//char encontre = "t";
-	char *resultado;
-	resultado = ft_memchr(str, 't', 3);
 
-	printf("%s\n", resultado);
-
-	return(0);
-}
-*/

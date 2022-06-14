@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecristin <ecristin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/02 21:17:31 by ecristin          #+#    #+#             */
-/*   Updated: 2022/06/11 11:54:58 by ecristin         ###   ########.fr       */
+/*   Created: 2022/06/13 21:31:44 by ecristin          #+#    #+#             */
+/*   Updated: 2022/06/13 21:32:22 by ecristin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <string.h>
+#include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t i;
+	char			buf[50];
+	unsigned int	tmp;
+	int				i;
 
 	i = 0;
-
-	while ( i < n)
+	if (n == 0)
 	{
-		if (((unsigned char *)s)[i] == c)
-			return((unsigned char *)s + i);
-		i++;
+		write(fd, "0", 1);
+		return ;
 	}
-	return(0);
+	if (n < 0)
+	{
+		tmp = -n;
+		write(fd, "-", 1);
+	}
+	else
+		tmp = n;
+	while (tmp)
+	{
+		buf[i++] = (tmp % 10) + '0';
+		tmp /= 10;
+	}
+	while (i--)
+		write(fd, buf + i, 1);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char str[] = "cristine";
-	//char encontre = "t";
-	char *resultado;
-	resultado = ft_memchr(str, 't', 3);
 
-	printf("%s\n", resultado);
-
-	return(0);
-}
-*/
