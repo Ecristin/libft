@@ -27,4 +27,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(new_str, s2, size);
 	return (new_str);
 }
-

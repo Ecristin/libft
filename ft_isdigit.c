@@ -10,22 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
-// se c está entre 0 e 9
 		return (1);
 	return (0);
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-	char e;
-	int t;
-
-	e = '9';
-	t = ft_isdigit(e);
-	printf("%d\n",t);
-}
-*/

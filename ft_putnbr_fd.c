@@ -39,4 +39,3 @@ void	ft_putnbr_fd(int n, int fd)
 	while (i--)
 		write(fd, buf + i, 1);
 }
-

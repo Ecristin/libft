@@ -24,4 +24,3 @@ char	*ft_strdup(const char *s)
 	ft_strlcpy(dup, s, size);
 	return (dup);
 }
-

@@ -13,21 +13,8 @@
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
-// c deve estar estar entre o 32 e o 126 que não imprimíveis da tabela ascii
 	{
 		return (1);
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-	char e;
-	int t;
-
-	e = 'A';
-	t = ft_isprint(e);
-	printf("%d\n",t);
-}
-*/

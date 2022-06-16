@@ -10,33 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <string.h>
+#include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-
-	while ( i < n)
+	while (i < n)
 	{
-		if (((unsigned char *)s)[i] == c)
-			return((unsigned char *)s + i);
+		if (((char *)s)[i] == c)
+			return ((char *)s + i);
 		i++;
 	}
-	return(0);
+	return (0);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	char str[] = "cristine";
-	//char encontre = "t";
-	char *resultado;
-	resultado = ft_memchr(str, 't', 3);
-
-	printf("%s\n", resultado);
-
-	return(0);
-}
-*/

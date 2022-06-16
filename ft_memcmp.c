@@ -10,16 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//A função memcmp() compara a string de bytes s1 com a string de bytes s2. Assume-se que ambas as cadeias têm n bytes de comprimento
-//A função memcmp() retorna zero se as duas strings forem idênticas, caso contrário, retorna a diferença entre a primeira dois bytes diferentes
+#include "libft.h"
 
-#include <string.h>
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while ( i < n)
+	while (i < n)
 	{
 		if (((unsigned char *)s1)[i] != ((unsigned char *)s2)[i])
 			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
@@ -27,18 +25,3 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <stdio.h>
-int main()
-{
-	char str1[] = "abcdej";
-	char str2[] = "abcdef";
-	int resultado;
-
-	resultado = ft_memcmp(str1,str2, 6);
-
-	printf("%d\n", resultado);
-		return(0);
-}
-*/
