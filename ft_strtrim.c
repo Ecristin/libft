@@ -6,7 +6,7 @@
 /*   By: ecristin <ecristin@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/13 19:50:37 by ecristin          #+#    #+#             */
-/*   Updated: 2022/06/13 19:55:39 by ecristin         ###   ########.fr       */
+/*   Updated: 2022/06/23 21:43:50 by ecristin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	while (s1[start] && ft_char_in_set(s1[start], set))
 		start++;
